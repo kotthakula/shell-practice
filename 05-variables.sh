@@ -10,4 +10,4 @@
 
 echo "please enter username"
 read -s Username
-echo "Username entered is :$Username"
+#echo "Username entered is :$Username"
