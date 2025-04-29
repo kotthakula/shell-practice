@@ -9,5 +9,5 @@
 # echo "Password entered is :$PASSWORD"
 
 echo "please enter username"
-read Username
+read -s Username
 echo "Username entered is :$Username"
