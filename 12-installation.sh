@@ -1,2 +1,2 @@
 #!/bin/bash
-dnf install git -y
+dnf install git  -y
