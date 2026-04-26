@@ -33,7 +33,7 @@ dnf list install mysql
 
 if [ $? -ne 0 ]
 then
-    echo "Mysql is not installed.. gong to install"
+    echo "Mysql is not installed.. going to install"
     dnf install mysql -y
      VALIDATE $? "Insatlling Mql"
    
