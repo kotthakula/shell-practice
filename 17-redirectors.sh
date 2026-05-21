@@ -32,8 +32,16 @@ VALIDATE(){
     fi
 }
 
+USAGE(){
+    echo -e "$R USAGE:: $N sudo sh 1-redirectors.sh package1 package2 ...."
+    exit1
+}
 CHECK_ROOT
 
+if [$# -eq 0 ]
+then
+    USAGE
+fi
 #sh 16-loops.sh git mysql postfix nginx
 for package in $@ #$@ refers to the passed to it
 do 
@@ -44,6 +52,6 @@ do
         dnf install $package -y
         VALIDATE $? "Insatlling $package"
 else
-    echo "$package is already installed, nothing to do $N" &>>LOG_FILE
+    echo -e "$package is already installed, nothing to do $N" &>>LOG_FILE
     fi
 done
